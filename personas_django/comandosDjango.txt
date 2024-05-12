@@ -1,0 +1,24 @@
+Instalar django al proyecto = python -m pip install django
+Ver version de django = django-admin version
+Iniciar programa = django-admin startproject sap
+
+Levandar servidor = python manage.py runserver
+Detener el proceso del servidor = ctrl+c
+
+Crear aplicación web =  python manage.py startapp webapp
+
+Ver migraciones pendientes = python manage.py showmigrations
+Aplicar migraciones pendientes =  python manage.py migrate
+
+Hacer migraciones pendientes= python manage.py makemigrations
+makemigrations guarda los cambios para ser ejecutados en servidor, lo que genera archivos de migracion
+
+Hacer transaccion a base de datos desde django = python manage.py sqlmigrate personas 0001
+* Despues de hacer la transacción, se tienen que migrar los cambios pendientes con : python manage.py migrate
+Despues de hacer makemigrations o cualquier otro cambio, se tiene que ejecutar el archivo migrate
+
+Crear usuario superusuario en consola de administración:
+    python manage.py createsuperuser
+    user: admin
+    main: admin@mail.com
+    psswrd: 123
