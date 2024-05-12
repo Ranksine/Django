@@ -3,10 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def bienvenido(request):
-    return HttpResponse('Hola mundo desde Django')
+    mensajes = {'msg1':'Valor mensaje 1', 'msg2':'Valor mensaje 2'}  # Tambien se puede pasar directamente el diccionario en lugar de la variable mensajes
+    return render(request, 'bienvenido.html', mensajes)  # return HttpResponse('Hola mundo desde Django')
 
-def despedirse(request):
-    return HttpResponse('Despedida desde Django')
 
-def contacto(request):
-    return HttpResponse('<p>Teléfono: 3421034117</p> Email: omar10ten@hotmail.com')
