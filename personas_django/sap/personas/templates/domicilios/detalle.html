@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Domicilio {{domicilio.id}}</title>
+</head>
+<body>
+    <h1>Detalle del domicilio <u>{{domicilio.calle}} {{domicilio.no_calle}}</u></h1>
+    <div>
+        Id Domicilio: {{domicilio.id}}
+    </div>
+    <div>
+        Nombre de la calle: {{domicilio.calle}}
+    </div>
+    <div>
+        Número: {{domicilio.no_calle}}
+    </div>
+    <div>
+        Pais: {{domicilio.pais}}
+    </div>
+
+    <a href="{% url 'cat_domicilios' %}">Regresar al Inicio</a>
+</body>
+</html>

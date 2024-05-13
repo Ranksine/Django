@@ -17,13 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from personas.views import detallePersonas, nuevaPersona, editarPersona
-from webapp.views import bienvenido
+from personas.views import detallePersonas, nuevaPersona, editarPersona,eliminarPersona, nuevoDomicilio, editarDomicilio, detalleDomicilios, eliminarDomicilio
+from webapp.views import bienvenido, catalogoDomicilio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenido, name='index'),
     path('detalle_persona/<int:id>', detallePersonas),
     path('nueva_persona', nuevaPersona),
-    path('editar_persona/<int:id>', editarPersona)
+    path('editar_persona/<int:id>', editarPersona),
+    path('eliminar_persona/<int:id>', eliminarPersona),
+    path('catalogo_domicilio', catalogoDomicilio, name='cat_domicilios'),
+    path('nuevo_domicilio', nuevoDomicilio),
+    path('detalle_domicilio/<int:id>', detalleDomicilios),
+    path('editar_domicilio/<int:id>', editarDomicilio),
+    path('eliminar_domicilio/<int:id>', eliminarDomicilio)
+
 ]
