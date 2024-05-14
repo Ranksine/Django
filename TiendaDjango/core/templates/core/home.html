@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hola Django!</h1>
+
+    {% load static %}
+    <img src="{% static 'core/img/gary.gif' %}" alt="" height=20% width=20% />
+
+    <h2>Hola {{context.nombre}}, tu personaje favorito es {{lista.2}}</h2></br>
+    <h3>Listado de personajes!</h3>
+    <ol>
+        {%for personaje in lista%}
+        <li>{{personaje}}</li>
+        {%endfor%}
+    </ol>
+
+    <h3>El Vinilo {{vinilo.nombre}} cuesta ${{vinilo.valor}}.00</h3>
+  </body>
+</html>
