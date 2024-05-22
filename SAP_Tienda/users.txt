@@ -1,0 +1,4 @@
+Superuser
+    user:admin
+    mail: admin@mail.com
+    pswrd:123
